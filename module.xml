@@ -1,0 +1,54 @@
+<module>
+
+<Login f="nodata">
+  <Login>
+    <Users t="dropdown" f="user"/>
+    <Login l="Control"/>
+    <Signup l="signup"/>
+  </Login>
+</Login>
+
+<Control f="nodata">
+  <Control>
+    <Record_Animal l="Record"/>
+  </Control>
+</Control>
+
+<Record>
+  <fmt>{{Animal}} {{author}} {{timestamp}}</fmt>
+  <Record>
+    <author f="readonly">User</author>
+    <timestamp f="readonly">Created at</timestamp>
+    <Photo t="camera"/>
+    <Animal>
+      <opts>
+        <opt>Animal 1
+          <opt>Animal 1A</opt>
+          <opt>Animal 1B</opt>
+          <opt>Animal 1C</opt>
+          <opt>Animal 1D</opt>
+        </opt>
+        <opt>Animal 2
+          <opt>Animal 2A</opt>
+          <opt>Animal 2B</opt>
+          <opt>Animal 2C</opt>
+          <opt>Animal 2D</opt>
+        </opt>
+        <opt>Animal 3
+          <opt>Animal 3A</opt>
+          <opt>Animal 3B</opt>
+          <opt>Animal 3C</opt>
+          <opt>Animal 3D</opt>
+        </opt>
+        <opt>Animal 4
+          <opt>Animal 4A</opt>
+          <opt>Animal 4B</opt>
+          <opt>Animal 4C</opt>
+          <opt>Animal 4D</opt>
+        </opt>
+      </opts>
+    </Animal>
+  </Record>
+</Record>
+
+</module>

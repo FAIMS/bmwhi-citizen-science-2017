@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dataSchema>
+  <ArchaeologicalElement name="Record">
+    <description></description>
+    <property name="Animal" type="vocab" isIdentifier="true">
+      <description></description>
+      <formatString>$1</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Animal_1}
+<description></description><term>{Animal_1A}
+<description></description></term><term>{Animal_1B}
+<description></description></term><term>{Animal_1C}
+<description></description></term><term>{Animal_1D}
+<description></description></term></term>
+        <term>{Animal_2}
+<description></description><term>{Animal_2A}
+<description></description></term><term>{Animal_2B}
+<description></description></term><term>{Animal_2C}
+<description></description></term><term>{Animal_2D}
+<description></description></term></term>
+        <term>{Animal_3}
+<description></description><term>{Animal_3A}
+<description></description></term><term>{Animal_3B}
+<description></description></term><term>{Animal_3C}
+<description></description></term><term>{Animal_3D}
+<description></description></term></term>
+        <term>{Animal_4}
+<description></description><term>{Animal_4A}
+<description></description></term><term>{Animal_4B}
+<description></description></term><term>{Animal_4C}
+<description></description></term><term>{Animal_4D}
+<description></description></term></term>
+      </lookup>
+    </property>
+    <property name="Record author" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString> $2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Record timestamp" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString> $2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Photo" type="file" file="true" thumbnail="true">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+  </ArchaeologicalElement>
+</dataSchema>

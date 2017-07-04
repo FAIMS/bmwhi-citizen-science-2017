@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8'?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>FILL THIS IN</h:title>
+    <model>
+      <instance>
+        <faims id="FILL_THIS_IN">
+          <!--START: Style-->
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <!--END: Style-->
+          <Login>
+            <Login>
+              <Users/>
+              <Login/>
+              <Signup_Guide_1/>
+              <Signup/>
+            </Login>
+          </Login>
+          <Control>
+            <Control>
+              <Record_Animal/>
+            </Control>
+          </Control>
+          <Record>
+            <Record>
+              <Record_author/>
+              <Record_timestamp/>
+              <Photo/>
+              <Photo_Button_1/>
+              <Animal/>
+            </Record>
+          </Record>
+        </faims>
+      </instance>
+    </model>
+  </h:head>
+  <h:body>
+    <!--START: Style-->
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <!--END: Style-->
+    <group ref="Login">
+      <label>{Login}</label>
+      <group ref="Login">
+        <label>{Login}</label>
+        <select1 ref="Users">
+          <label>{Users}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <trigger ref="Login">
+          <label>{Login}</label>
+        </trigger>
+        <input faims_web="true" ref="Signup_Guide_1">
+          <label/>
+        </input>
+        <trigger ref="Signup">
+          <label>{Signup}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Control">
+        <label>{Control}</label>
+        <trigger ref="Record_Animal">
+          <label>{Record_Animal}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Record" faims_archent_type="Record">
+      <label>{Record}</label>
+      <group ref="Record">
+        <label>{Record}</label>
+        <input faims_attribute_name="Record author" faims_attribute_type="measure" ref="Record_author" faims_read_only="true">
+          <label>{User}</label>
+        </input>
+        <input faims_attribute_name="Record timestamp" faims_attribute_type="measure" ref="Record_timestamp" faims_read_only="true">
+          <label>{Created_at}</label>
+        </input>
+        <select faims_sync="true" type="camera" faims_attribute_name="Photo" faims_attribute_type="measure" ref="Photo">
+          <label>{Photo}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Photo_Button_1">
+          <label>{Photo}</label>
+        </trigger>
+        <select1 faims_attribute_name="Animal" faims_attribute_type="vocab" ref="Animal">
+          <label>{Animal}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+  </h:body>
+</h:html>
