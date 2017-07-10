@@ -3,7 +3,7 @@
 <Login f="nodata">
   <Login>
     <Users t="dropdown" f="user"/>
-    <Login l="Control"/>
+    <Login ll="Control"/>
     <Signup l="signup"/>
   </Login>
 </Login>

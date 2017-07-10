@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: 7ebb3604a3cba3e0757b37a7df8146c804fbdf55
+ * GENERATED WITH FAIMS-TOOLS, SHA1: a7244dd98d16bb9aee8b65205c08ffa8a3d104c9
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -2461,24 +2461,26 @@ void onShowRecord () {
 
 addOnEvent("Record", "show", "onShowRecord()");
 
-void onClickLoginLogin () {
-  newTab("Control", true);
-}
+
 
 void onClickControlRecordAnimal () {
   parentTabgroup__ = "Control";
   newRecord();
 }
 
+void onValidClickLoginLogin () {
+  newTab("Control", true);
+}
 
 
 
+void onClickLoginLogin () {
+  showVerifyUserDialog("onValidClickLoginLogin()");
+}
 
 
-
-
-addOnEvent("Login/Login/Login", "click", "onClickLoginLogin()");
 addOnEvent("Control/Control/Record_Animal", "click", "onClickControlRecordAnimal()");
+addOnEvent("Login/Login/Login", "click", "onClickLoginLogin()");
 
 /******************************************************************************/
 /*                   AUDIO, CAMERA, FILE AND VIDEO BINDINGS                   */
