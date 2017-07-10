@@ -7,8 +7,8 @@
       <formatString>$1</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
-        <term>{Animal_1}
-<description></description><term>{Animal_1A}
+        <term pictureURL="files/data/roo.jpg">{Animal_1}
+<description></description><term pictureURL="files/data/roo-baby.jpg">{Animal_1A}
 <description></description></term><term>{Animal_1B}
 <description></description></term><term>{Animal_1C}
 <description></description></term><term>{Animal_1D}

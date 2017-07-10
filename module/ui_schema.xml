@@ -119,7 +119,7 @@
         <trigger ref="Photo_Button_1">
           <label>{Photo}</label>
         </trigger>
-        <select1 faims_attribute_name="Animal" faims_attribute_type="vocab" ref="Animal">
+        <select1 type="image" faims_attribute_name="Animal" faims_attribute_type="vocab" ref="Animal">
           <label>{Animal}</label>
           <item>
             <label>Options not loaded</label>

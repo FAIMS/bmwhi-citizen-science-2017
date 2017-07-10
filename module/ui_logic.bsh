@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: a7244dd98d16bb9aee8b65205c08ffa8a3d104c9
+ * GENERATED WITH FAIMS-TOOLS, SHA1: 681a12239f6b2032ec4eb9094f7ebe5f2536ada2
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -156,7 +156,7 @@ REF_TO_TYPE.put("Record/Record/Record_author", "input");
 REF_TO_TYPE.put("Record/Record/Record_timestamp", "input");
 REF_TO_TYPE.put("Record/Record/Photo", "camera");
 REF_TO_TYPE.put("Record/Record/Photo_Button_1", "button");
-REF_TO_TYPE.put("Record/Record/Animal", "dropdown");
+REF_TO_TYPE.put("Record/Record/Animal", "picture");
 REF_TO_TYPE.put("Login/Login", "tab");
 REF_TO_TYPE.put("Control/Control", "tab");
 REF_TO_TYPE.put("Record/Record", "tab");

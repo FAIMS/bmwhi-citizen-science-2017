@@ -1,3 +1,4 @@
+<!--@POSTPROC: cd data; tar -cvzf ../module/data.tar.gz *-->
 <module>
 
 <Login f="nodata">
@@ -22,8 +23,8 @@
     <Photo t="camera"/>
     <Animal>
       <opts>
-        <opt>Animal 1
-          <opt>Animal 1A</opt>
+        <opt p="roo.jpg">Animal 1
+          <opt p="roo-baby.jpg">Animal 1A</opt>
           <opt>Animal 1B</opt>
           <opt>Animal 1C</opt>
           <opt>Animal 1D</opt>
