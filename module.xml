@@ -12,6 +12,7 @@
 <Control f="nodata">
   <Control>
     <Record_Animal l="Record"/>
+    <GPS_Diagnostics t="gpsdiag"/>
   </Control>
 </Control>
 
@@ -21,6 +22,7 @@
     <author f="readonly">User</author>
     <timestamp f="readonly">Created at</timestamp>
     <Photo t="camera"/>
+    <gps/>
     <Animal>
       <opts>
         <opt p="roo.jpg">Animal 1

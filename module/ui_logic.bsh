@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: 681a12239f6b2032ec4eb9094f7ebe5f2536ada2
+ * GENERATED WITH FAIMS-TOOLS, SHA1: 2b065d8e8a736d51a850f91a1142c5c96cdce31c
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -152,10 +152,17 @@ REF_TO_TYPE.put("Login/Login/Login", "button");
 REF_TO_TYPE.put("Login/Login/Signup_Guide_1", "webview");
 REF_TO_TYPE.put("Login/Login/Signup", "button");
 REF_TO_TYPE.put("Control/Control/Record_Animal", "button");
+REF_TO_TYPE.put("Control/Control/GPS_Diagnostics", "gpsdiag");
 REF_TO_TYPE.put("Record/Record/Record_author", "input");
 REF_TO_TYPE.put("Record/Record/Record_timestamp", "input");
 REF_TO_TYPE.put("Record/Record/Photo", "camera");
 REF_TO_TYPE.put("Record/Record/Photo_Button_1", "button");
+REF_TO_TYPE.put("Record/Record/Latitude", "input");
+REF_TO_TYPE.put("Record/Record/Longitude", "input");
+REF_TO_TYPE.put("Record/Record/Northing", "input");
+REF_TO_TYPE.put("Record/Record/Easting", "input");
+REF_TO_TYPE.put("Record/Record/Accuracy", "input");
+REF_TO_TYPE.put("Record/Record/Take_From_GPS_1", "button");
 REF_TO_TYPE.put("Record/Record/Animal", "picture");
 REF_TO_TYPE.put("Login/Login", "tab");
 REF_TO_TYPE.put("Control/Control", "tab");
@@ -164,6 +171,11 @@ REF_TO_TYPE.put("Record/Record", "tab");
 DATA_REFS.add("Record/Record/Record_author");
 DATA_REFS.add("Record/Record/Record_timestamp");
 DATA_REFS.add("Record/Record/Photo");
+DATA_REFS.add("Record/Record/Latitude");
+DATA_REFS.add("Record/Record/Longitude");
+DATA_REFS.add("Record/Record/Northing");
+DATA_REFS.add("Record/Record/Easting");
+DATA_REFS.add("Record/Record/Accuracy");
 DATA_REFS.add("Record/Record/Animal");
 
 
@@ -388,13 +400,20 @@ String getArch16nKey(String ref) {
 }
 
 String guessArch16nVal(String ref) {
-  String arch16nKey = getArch16nKey(ref);
+  return guessArch16nValFromRef(ref);
+}
 
-  if (isNull(arch16nKey)) return "";
-  arch16nKey = arch16nKey.replaceAll("_", " ");
-  arch16nKey = arch16nKey.replaceAll("^\\{", "");
-  arch16nKey = arch16nKey.replaceAll("\\}$", "");
-  return arch16nKey;
+String guessArch16nValFromRef(String ref) {
+  String arch16nKey = getArch16nKey(ref);
+  return guessArch16nValFromKey(arch16nKey);
+}
+
+String guessArch16nValFromKey(String key) {
+  if (isNull(key)) return "";
+  key = key.replaceAll("_", " ");
+  key = key.replaceAll("^\\{", "");
+  key = key.replaceAll("\\}$", "");
+  return key;
 }
 
 String getAttributeName(String ref) {
@@ -2046,10 +2065,10 @@ String getMenuValue(String ref) {
 /******************************************************************************/
 /*                                    GPS                                     */
 /******************************************************************************/
-
+addOnEvent("Control/Control/GPS_Diagnostics", "show", "updateGPSDiagnostics()");
 
 void updateGPSDiagnostics() {
-  String diagnosticsRef = "";
+  String diagnosticsRef = "Control/Control/GPS_Diagnostics";
   if (diagnosticsRef.equals("")) {
     return;
   }
@@ -2910,11 +2929,11 @@ void loadRecordFrom(String uuid) {
 /******************************************************************************/
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
-
+addOnEvent("Record/Record/Take_From_GPS_1", "click", "takePoint(\"Record\")");
 
 Map getTakeFromGpsMappings() {
   Map tabgroupToTabRef = new HashMap();
-  
+  tabgroupToTabRef.put("Record", "Record/Record");
   return tabgroupToTabRef;
 }
 
