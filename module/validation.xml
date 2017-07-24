@@ -1,2 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
-<ValidationSchema/>
+<ValidationSchema>
+  <ArchaeologicalElement name="Record">
+    <property name="Time Observation Started">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+    <property name="Survey ID">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+    <property name="Species">
+      <validator type="blankchecker">
+        <param type="field" value="vocab"/>
+      </validator>
+    </property>
+    <property name="Sex">
+      <validator type="blankchecker">
+        <param type="field" value="vocab"/>
+      </validator>
+    </property>
+    <property name="Time Observation Ended">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+</ValidationSchema>

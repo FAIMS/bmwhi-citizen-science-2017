@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: 2b065d8e8a736d51a850f91a1142c5c96cdce31c
+ * GENERATED WITH FAIMS-TOOLS, SHA1: 678f60842428cc01e5623bb2a0040e0adf9413c2
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -149,50 +149,90 @@ HashMap ATTRIB_NAMES_NON_STANDARD      = new HashMap();
 
 REF_TO_TYPE.put("Login/Login/Users", "dropdown");
 REF_TO_TYPE.put("Login/Login/Login", "button");
-REF_TO_TYPE.put("Login/Login/Signup_Guide_1", "webview");
-REF_TO_TYPE.put("Login/Login/Signup", "button");
-REF_TO_TYPE.put("Control/Control/Record_Animal", "button");
+REF_TO_TYPE.put("Control/Control/Create_New_Location", "button");
+REF_TO_TYPE.put("Control/Control/Existing_Locations", "list");
 REF_TO_TYPE.put("Control/Control/GPS_Diagnostics", "gpsdiag");
+REF_TO_TYPE.put("Control/Set_IDs/Next_Survey_ID", "input");
+REF_TO_TYPE.put("Location/Static_data/Location_timestamp", "input");
+REF_TO_TYPE.put("Location/Static_data/Location_author", "input");
+REF_TO_TYPE.put("Location/Static_data/Location_Name", "input");
+REF_TO_TYPE.put("Location/Static_data/Latitude", "input");
+REF_TO_TYPE.put("Location/Static_data/Longitude", "input");
+REF_TO_TYPE.put("Location/Static_data/Northing", "input");
+REF_TO_TYPE.put("Location/Static_data/Easting", "input");
+REF_TO_TYPE.put("Location/Static_data/Accuracy", "input");
+REF_TO_TYPE.put("Location/Static_data/Take_From_GPS_1", "button");
+REF_TO_TYPE.put("Location/Static_data/Altitude_masl", "input");
+REF_TO_TYPE.put("Location/Observation/Create_Observation", "button");
+REF_TO_TYPE.put("Location/Observation/Existing_Observation", "list");
 REF_TO_TYPE.put("Record/Record/Record_author", "input");
-REF_TO_TYPE.put("Record/Record/Record_timestamp", "input");
+REF_TO_TYPE.put("Record/Record/Location_Name", "input");
+REF_TO_TYPE.put("Record/Record/Start_Observation", "button");
+REF_TO_TYPE.put("Record/Record/Time_Observation_Started", "input");
+REF_TO_TYPE.put("Record/Record/Survey_ID", "input");
 REF_TO_TYPE.put("Record/Record/Photo", "camera");
 REF_TO_TYPE.put("Record/Record/Photo_Button_1", "button");
-REF_TO_TYPE.put("Record/Record/Latitude", "input");
-REF_TO_TYPE.put("Record/Record/Longitude", "input");
-REF_TO_TYPE.put("Record/Record/Northing", "input");
-REF_TO_TYPE.put("Record/Record/Easting", "input");
-REF_TO_TYPE.put("Record/Record/Accuracy", "input");
-REF_TO_TYPE.put("Record/Record/Take_From_GPS_1", "button");
-REF_TO_TYPE.put("Record/Record/Animal", "picture");
+REF_TO_TYPE.put("Record/Record/Species", "picture");
+REF_TO_TYPE.put("Record/Record/Sex", "radio");
+REF_TO_TYPE.put("Record/Record/Count", "input");
+REF_TO_TYPE.put("Record/Record/Altitude_masl", "input");
+REF_TO_TYPE.put("Record/Record/Temperature_In_Celsius", "input");
+REF_TO_TYPE.put("Record/Record/Wind", "dropdown");
+REF_TO_TYPE.put("Record/Record/Cloud_Cover", "dropdown");
+REF_TO_TYPE.put("Record/Record/Habitat", "dropdown");
+REF_TO_TYPE.put("Record/Record/End_Observation", "button");
+REF_TO_TYPE.put("Record/Record/Time_Observation_Ended", "input");
 REF_TO_TYPE.put("Login/Login", "tab");
 REF_TO_TYPE.put("Control/Control", "tab");
+REF_TO_TYPE.put("Control/Set_IDs", "tab");
+REF_TO_TYPE.put("Location/Static_data", "tab");
+REF_TO_TYPE.put("Location/Observation", "tab");
 REF_TO_TYPE.put("Record/Record", "tab");
 
+DATA_REFS.add("Location/Static_data/Location_timestamp");
+DATA_REFS.add("Location/Static_data/Location_author");
+DATA_REFS.add("Location/Static_data/Location_Name");
+DATA_REFS.add("Location/Static_data/Latitude");
+DATA_REFS.add("Location/Static_data/Longitude");
+DATA_REFS.add("Location/Static_data/Northing");
+DATA_REFS.add("Location/Static_data/Easting");
+DATA_REFS.add("Location/Static_data/Accuracy");
+DATA_REFS.add("Location/Static_data/Altitude_masl");
 DATA_REFS.add("Record/Record/Record_author");
-DATA_REFS.add("Record/Record/Record_timestamp");
+DATA_REFS.add("Record/Record/Location_Name");
+DATA_REFS.add("Record/Record/Time_Observation_Started");
+DATA_REFS.add("Record/Record/Survey_ID");
 DATA_REFS.add("Record/Record/Photo");
-DATA_REFS.add("Record/Record/Latitude");
-DATA_REFS.add("Record/Record/Longitude");
-DATA_REFS.add("Record/Record/Northing");
-DATA_REFS.add("Record/Record/Easting");
-DATA_REFS.add("Record/Record/Accuracy");
-DATA_REFS.add("Record/Record/Animal");
+DATA_REFS.add("Record/Record/Species");
+DATA_REFS.add("Record/Record/Sex");
+DATA_REFS.add("Record/Record/Count");
+DATA_REFS.add("Record/Record/Altitude_masl");
+DATA_REFS.add("Record/Record/Temperature_In_Celsius");
+DATA_REFS.add("Record/Record/Wind");
+DATA_REFS.add("Record/Record/Cloud_Cover");
+DATA_REFS.add("Record/Record/Habitat");
+DATA_REFS.add("Record/Record/Time_Observation_Ended");
 
 
 
 
 
-HIER_REFS.add("Record/Record/Animal");
+HIER_REFS.add("Record/Record/Species");
 
 TAB_GROUPS_AS_LIST.add("Login");
 TAB_GROUPS_AS_LIST.add("Control");
+TAB_GROUPS_AS_LIST.add("Location");
 TAB_GROUPS_AS_LIST.add("Record");
 
 TABS_AS_LIST.add("Login/Login");
 TABS_AS_LIST.add("Control/Control");
+TABS_AS_LIST.add("Control/Set_IDs");
+TABS_AS_LIST.add("Location/Static_data");
+TABS_AS_LIST.add("Location/Observation");
 TABS_AS_LIST.add("Record/Record");
 
-
+ATTRIB_NAMES_NON_STANDARD.put("Location/Static_data/Location_Name", "Location Location Name");
+ATTRIB_NAMES_NON_STANDARD.put("Record/Record/Location_Name", "Record Location Name");
 
 String getType(String ref) {
   String type = REF_TO_TYPE.get(ref);
@@ -264,7 +304,7 @@ HashSet getTabsAsHashSet() {
 
 List getStartingIdRefs() {
   List l = new ArrayList();
-  
+  l.add("Control/Set_IDs/Next_Survey_ID");
   return l;
 }
 
@@ -659,6 +699,7 @@ void makeLocalId(){
       "    id              INTEGER PRIMARY KEY," +
       "    deviceModel     TEXT," +
       "    sessStartMs     INTEGER," +
+      "    parentNameSpace TEXT," +
       "    srcLine         TEXT," +
       "    query           TEXT," +
       "    queryStartMs    INTEGER," +
@@ -913,17 +954,19 @@ TimedFetchCallback(String query, FetchCallback cb, int callerIdx) {
   }
 
   void updatePerfLog() {
-    String deviceModel  = android.os.Build.MODEL;
-    String sessStartMs  = SESS_START_TIME + "";
-    String srcLine      = super.cs_.get(super.callerIdx).getInvocationLine()+"";
-    String query        = super.query;
-    String queryStartMs = super.startTime + "";
-    String queryStopMs  = super.stopTime + "";
+    String deviceModel     = android.os.Build.MODEL;
+    String sessStartMs     = SESS_START_TIME + "";
+    String parentNameSpace = cs_.get(callerIdx + 1).getName() + "";
+    String srcLine         = cs_.get(callerIdx + 0).getInvocationLine() + "";
+    String query           = query;
+    String queryStartMs    = startTime + "";
+    String queryStopMs     = stopTime + "";
 
     String updateQuery = "";
     updateQuery += " INSERT INTO perflog (";
     updateQuery += "             deviceModel,";
     updateQuery += "             sessStartMs,";
+    updateQuery += "             parentNameSpace,";
     updateQuery += "             srcLine,";
     updateQuery += "             query,";
     updateQuery += "             queryStartMs,";
@@ -932,7 +975,7 @@ TimedFetchCallback(String query, FetchCallback cb, int callerIdx) {
     updateQuery += "             numAentvalue,";
     updateQuery += "             numRelationship,";
     updateQuery += "             numAentreln";
-    updateQuery += " )    SELECT %s, %s, %s, %s, %s, %s, a, av, r, ar";
+    updateQuery += " )    SELECT %s, %s, %s, %s, %s, %s, %s, a, av, r, ar";
     updateQuery += "        FROM";
     updateQuery += "             (SELECT COUNT(*) AS a  FROM archentity  ) a,";
     updateQuery += "             (SELECT COUNT(*) AS av FROM aentvalue   ) av,";
@@ -941,6 +984,7 @@ TimedFetchCallback(String query, FetchCallback cb, int callerIdx) {
 
     updateQuery = dbReplaceFirst(updateQuery, deviceModel);
     updateQuery = dbReplaceFirst(updateQuery, sessStartMs);
+    updateQuery = dbReplaceFirst(updateQuery, parentNameSpace);
     updateQuery = dbReplaceFirst(updateQuery, srcLine);
     updateQuery = dbReplaceFirst(updateQuery, query);
     updateQuery = dbReplaceFirst(updateQuery, queryStartMs);
@@ -989,12 +1033,16 @@ void timedPopulateCursorList(String ref, String q, int limit) {
 
 void setUpTypeHierarchy() {
   //- 
-  //  - Record
+  //  - Location
+  //    - Record
 
   n0 = Tree("", 1);
-  n1 = Tree("Record", 1);
+  n1 = Tree("Location", 1);
+  n2 = Tree("Record", 1);
 
   n0.addChild(n1);
+
+  n1.addChild(n2);
 
 
   PERF_TYPE_TREE = n0;
@@ -1759,7 +1807,7 @@ void inheritFieldValue(String src, String dst) {
   inheritFieldValue(src, dst, true);
 }
 
-
+inheritFieldValue("Location/Static_data/Location_Name", "Record/Record/Location_Name", true);
 
 /******************************************************************************/
 /*                            NEW TAB REDIRECTION                             */
@@ -1809,6 +1857,28 @@ for (entry : REF_TO_TYPE.entrySet()) {
 /******************************************************************************/
 /*                              MENU POPULATION                               */
 /******************************************************************************/
+/* Deprecated: Fetches the contents of a specifed vocabulary and stores it in
+ * the given list.
+ */
+void fetchVocab(String vocabName, List storageList) {
+  fetchVocab(vocabName, storageList, null);
+}
+
+void fetchVocab(String vocabName, List storageList, String callbackFunction) {
+  fetchAll("select vocabid, vocabname from vocabulary left join attributekey using (attributeid) where attributename = '" + vocabName + "';", new FetchCallback() {
+    onFetch(result) {
+      if (isNull(result))
+        result = new ArrayList();
+
+      storageList.addAll(result);
+      Log.d("fetchVocab()", "Fetched vocabulary \"" + vocabname + "\" contents: " + result.toString());
+      if (callbackFunction != null && !isNull(callbackFunction)) {
+        execute(callbackFunction);
+      }
+    }
+  });
+}
+
 /** Wrapper for to make a vocab without an exlusion list **/
 String getMakeVocabType(String ref) {
   if (isHier(ref)) return "hierarchical" + getType(ref);
@@ -2063,7 +2133,7 @@ String getMenuValue(String ref) {
 }
 
 /******************************************************************************/
-/*                                    GPS                                     */
+/*                                  GPS/MAP                                   */
 /******************************************************************************/
 addOnEvent("Control/Control/GPS_Diagnostics", "show", "updateGPSDiagnostics()");
 
@@ -2129,6 +2199,8 @@ void updateGPSDiagnostics() {
   }
   setFieldValue(diagnosticsRef, status);
 }
+
+
 
 /******************************************************************************/
 /*                                 ACTION BAR                                 */
@@ -2292,7 +2364,7 @@ if (!isNull(USER_MENU_PATH)) {
   addOnEvent(USER_MENU_PATH, "click", "selectUser()");
 }
 
-addOnEvent("Login/Login/Signup", "click", "onClickSignup__()");
+
 
 /******************************************************************************/
 /*                                 VALIDATION                                 */
@@ -2360,6 +2432,25 @@ String validateFields(List fields, String format) {
   return out;
 }
 
+void validateControl() {
+  List f = new ArrayList(); // Fields to be validated
+  f.add(fieldPair("Control/Set_IDs/Next_Survey_ID", "{Next_Survey_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("{validation_results}", validationMessage);
+}
+void validateRecord() {
+  List f = new ArrayList(); // Fields to be validated
+  f.add(fieldPair("Record/Record/Time_Observation_Started", "{Time_Observation_Started}"));
+  f.add(fieldPair("Record/Record/Survey_ID", "{Survey_ID}"));
+  f.add(fieldPair("Record/Record/Photo", "{Photo}"));
+  f.add(fieldPair("Record/Record/Species", "{Species}"));
+  f.add(fieldPair("Record/Record/Sex", "{Sex}"));
+  f.add(fieldPair("Record/Record/Time_Observation_Ended", "{Time_Observation_Ended}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("{validation_results}", validationMessage);
+}
 
 
 /******************************************************************************/
@@ -2465,8 +2556,9 @@ String getTimestampNow(String fmt) {
 void populateAuthorAndTimestamp(String tabgroup) {
   Map tabgroupToAuthor    = new HashMap();
   Map tabgroupToTimestamp = new HashMap();
+  tabgroupToAuthor.put("Location", "Location/Static_data/Location_author");
   tabgroupToAuthor.put("Record", "Record/Record/Record_author");
-  tabgroupToTimestamp.put("Record", "Record/Record/Record_timestamp");
+  tabgroupToTimestamp.put("Location", "Location/Static_data/Location_timestamp");
   String authorPath    = tabgroupToAuthor.get(tabgroup);
   String timestampPath = tabgroupToTimestamp.get(tabgroup);
 
@@ -2474,17 +2566,22 @@ void populateAuthorAndTimestamp(String tabgroup) {
   if (!isNull(timestampPath)) setFieldValue(timestampPath, getTimestampNow());
 }
 
+void onShowLocation () {
+  saveTabGroup("Location");
+}
+
 void onShowRecord () {
   saveTabGroup("Record");
 }
 
+addOnEvent("Location", "show", "onShowLocation()");
 addOnEvent("Record", "show", "onShowRecord()");
 
 
 
-void onClickControlRecordAnimal () {
+void onClickControlCreateNewLocation () {
   parentTabgroup__ = "Control";
-  newRecord();
+  newLocation();
 }
 
 void onValidClickLoginLogin () {
@@ -2497,9 +2594,12 @@ void onClickLoginLogin () {
   showVerifyUserDialog("onValidClickLoginLogin()");
 }
 
-
-addOnEvent("Control/Control/Record_Animal", "click", "onClickControlRecordAnimal()");
+void onClickLocationCreateObservation () {
+  newRecord("Location");
+}
+addOnEvent("Control/Control/Create_New_Location", "click", "onClickControlCreateNewLocation()");
 addOnEvent("Login/Login/Login", "click", "onClickLoginLogin()");
+addOnEvent("Location/Observation/Create_Observation", "click", "onClickLocationCreateObservation()");
 
 /******************************************************************************/
 /*                   AUDIO, CAMERA, FILE AND VIDEO BINDINGS                   */
@@ -2524,7 +2624,8 @@ void removeNavigationButtons() {
 void addNavigationButtons(String tabgroup) {
   removeNavigationButtons();
   List tabgroupsToValidate = new ArrayList();
-  
+  tabgroupsToValidate.add("Control");
+  tabgroupsToValidate.add("Record");
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
       "{New}";
@@ -2793,8 +2894,8 @@ void loadEntityFrom(String entityID, String onFail) {
 }
 
 
-void newRecord(String parent){
-  String tabgroup = "Record";
+void newLocation(String parent){
+  String tabgroup = "Location";
   if (!isNull(parent)) {
     triggerAutoSave();
     parentTabgroup   = parent;
@@ -2811,15 +2912,87 @@ void newRecord(String parent){
   executeOnEvent(tabgroup, "create");
 }
 
+void newLocation (){
+  newLocation(null);
+}
+
+void newRecord(String parent){
+  String tabgroup = "Record";
+  if (!isNull(parent)) {
+    triggerAutoSave();
+    parentTabgroup   = parent;
+    parentTabgroup__ = parent;
+  }
+  if (isNull("Control/Set_IDs/Next_Survey_ID")) {
+    showWarning("{Alert}", "{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+  populateAuthorAndTimestamp(tabgroup);
+  populateEntityListsInTabGroup(tabgroup);
+  incAutoNum("Record/Record/Survey_ID");
+
+  executeOnEvent(tabgroup, "create");
+}
+
 void newRecord (){
   newRecord(null);
+}
+void duplicateLocation(){
+  String tabgroup = "Location";
+  String uuidOld = getUuid(tabgroup);
+  setUuid(tabgroup, "");
+  disableAutoSave(tabgroup);
+  
+  clearGpsInTabGroup(tabgroup);
+  populateAuthorAndTimestamp(tabgroup);
+  populateEntityListsInTabGroup(tabgroup);
+  
+  executeOnEvent(tabgroup, "copy");
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+
+      timedFetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+
+          if (result != null && result.size() >= 1) {
+            parentTabgroup__ = result.get(0).get(4);
+            parentTabgroup__ = parentTabgroup__.replaceAll(" ", "_");
+          }
+
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  timedFetchAll(getDuplicateAttributeQuery(uuidOld, extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+
+      
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
 }
 void duplicateRecord(){
   String tabgroup = "Record";
   String uuidOld = getUuid(tabgroup);
   setUuid(tabgroup, "");
   disableAutoSave(tabgroup);
-  
+  incAutoNum("Record/Record/Survey_ID");
   clearGpsInTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
@@ -2861,6 +3034,7 @@ void duplicateRecord(){
     }
   });
 }
+addOnEvent("Location", "save", "populateEntityListsOfArchEnt(\"Location\")");
 addOnEvent("Record", "save", "populateEntityListsOfArchEnt(\"Record\")");
 
 void doNotDelete(){
@@ -2869,7 +3043,9 @@ void doNotDelete(){
 
 addOnEvent("Login", "show", "removeNavigationButtons()");
 addOnEvent("Control", "show", "removeNavigationButtons()");
+addOnEvent("Location", "show", "removeNavigationButtons()");
 addOnEvent("Record", "show", "removeNavigationButtons()");
+addOnEvent("Location", "show", "addNavigationButtons(\"Location\")");
 addOnEvent("Record", "show", "addNavigationButtons(\"Record\")");
 
 /******************************************************************************/
@@ -2888,7 +3064,7 @@ void search(){
   String refSearchTerm  = "/Search/Search_Term";
   String refEntityTypes = "/Search/Entity_Types";
 
-  String type = "";
+  String type = getFieldValue(refEntityTypes);
   String term = getFieldValue(refSearchTerm);
   String searchQuery = "SELECT uuid, response "+
                        "  FROM latestNonDeletedArchEntFormattedIdentifiers  "+
@@ -2910,6 +3086,21 @@ void search(){
   Log.d("Module", "Search query: " + searchQuery);
 }
 
+void loadLocationFrom(String uuid) {
+  String tabgroup = "Location";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      populateEntityListsInTabGroup(tabgroup);
+      executeOnEvent(tabgroup, "fetch");
+    }
+  };
+
+  executeOnEvent(tabgroup, "prefetch");
+  showTabGroup(tabgroup, uuid, cb);
+}
 void loadRecordFrom(String uuid) {
   String tabgroup = "Record";
   setUuid(tabgroup, uuid);
@@ -2929,11 +3120,11 @@ void loadRecordFrom(String uuid) {
 /******************************************************************************/
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
-addOnEvent("Record/Record/Take_From_GPS_1", "click", "takePoint(\"Record\")");
+addOnEvent("Location/Static_data/Take_From_GPS_1", "click", "takePoint(\"Location\")");
 
 Map getTakeFromGpsMappings() {
   Map tabgroupToTabRef = new HashMap();
-  tabgroupToTabRef.put("Record", "Record/Record");
+  tabgroupToTabRef.put("Location", "Location/Static_data");
   return tabgroupToTabRef;
 }
 
@@ -3108,7 +3299,7 @@ for (String ref : getStartingIdRefs())
 
 void incAutoNum(String destPath) {
   Map destToSource = new HashMap();
-  
+  destToSource.put("Record/Record/Survey_ID", "Control/Set_IDs/Next_Survey_ID");
 
   String sourcePath = destToSource.get(destPath);
   String destVal    = getFieldValue(sourcePath);
@@ -3118,7 +3309,7 @@ void incAutoNum(String destPath) {
 /******************************************************************************/
 /*                         POPULATION VIA <MARKDOWN>                          */
 /******************************************************************************/
-populateWebViewHtml("Login/Login/Signup_Guide_1", "<hr />\n<p>In order to sign up, please ensure:</p>\n<ol style=\"list-style-type: decimal\">\n<li>Your device is online</li>\n<li>FAIMS is connected to the correct server</li>\n<li>You have choosen a strong password</li>\n</ol>\n<p>A strong password has at least 6 characters, 1 uppercase letter, 1 lowercase letter, 1 digit and 1 symbol. Examples of strong passwords:</p>\n<ul>\n<li>D!gging4bi0facts</li>\n<li>2_artif&amp;ctS</li>\n</ul>\n");
+
 
 /******************************************************************************/
 /*                POPULATION OF ENTITY AND CHILD ENTITY LISTS                 */
@@ -3243,7 +3434,18 @@ String getEntityMenuPopulationFunction(String[] menuDescriptor) {
 }
 
 ENTITY_MENUS = new ArrayList();
-
+ENTITY_MENUS.add(new String[] {
+    "Control/Control/Existing_Locations",
+    "getUuid(\"Control\")",
+    "Location",
+    ""
+});
+ENTITY_MENUS.add(new String[] {
+    "Location/Observation/Existing_Observation",
+    "getUuid(\"Location\")",
+    "Record",
+    "Location - Record"
+});
 for (m : ENTITY_MENUS) {
   String functionCall = getEntityMenuPopulationFunction(m);
   execute(functionCall);
@@ -3259,7 +3461,8 @@ for (m : ENTITY_MENUS) {
   addOnEvent(ref, evt, cmd);
 }
 
-
+addOnEvent("Control/Control/Existing_Locations", "click", "loadEntity()");
+addOnEvent("Location/Observation/Existing_Observation", "click", "loadEntity()");
 /******************************************************************************/
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/

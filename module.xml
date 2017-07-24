@@ -1,57 +1,153 @@
 <!--@POSTPROC: cd data; tar -cvzf ../module/data.tar.gz *-->
 <module>
 
-<Login f="nodata">
-  <Login>
-    <Users t="dropdown" f="user"/>
-    <Login ll="Control"/>
-    <Signup l="signup"/>
+  <Login f="nodata">
+    <Login>
+      <Users t="dropdown" f="user"/>
+      <Login ll="Control"/>
+    </Login>
   </Login>
-</Login>
 
-<Control f="nodata">
-  <Control>
-    <Record_Animal l="Record"/>
-    <GPS_Diagnostics t="gpsdiag"/>
+  <Control f="nodata">
+    <Control f="noscroll">
+      <Create_New_Location t="button" f="nocertainty noannotation" l="Location"/>
+      <Existing_Locations t="list" f="nocertainty noannotation" e="Location"/>
+      <GPS_Diagnostics t="gpsdiag"/>
+    </Control>
+    <Set_IDs>
+      <autonum/>
+    </Set_IDs>
   </Control>
-</Control>
 
-<Record>
-  <fmt>{{Animal}} {{author}} {{timestamp}}</fmt>
+  <Location>
+    <Static_data>
+      <cols>
+        <timestamp f="nocertainty noannotation">
+          Location Created at
+        </timestamp>
+        <author f="nocertainty noannotation">
+          Created by
+        </author>
+      </cols>
+      <Location_Name f="id">
+        <str>
+          <pos>1</pos>
+          <fmt>$0</fmt>
+        </str>
+      </Location_Name>
+      <gps/>
+      <Altitude_masl b="decimal">
+        Altitude (masl)
+      </Altitude_masl>
+    </Static_data>
+    <Observation f="noscroll">
+      <Create_Observation t="button" f="nocertainty noannotation" lc="Record"/>
+      <Existing_Observation t="list" ec="Record"/>
+    </Observation>
+  </Location>
+
   <Record>
-    <author f="readonly">User</author>
-    <timestamp f="readonly">Created at</timestamp>
-    <Photo t="camera"/>
-    <gps/>
-    <Animal>
-      <opts>
-        <opt p="roo.jpg">Animal 1
-          <opt p="roo-baby.jpg">Animal 1A</opt>
-          <opt>Animal 1B</opt>
-          <opt>Animal 1C</opt>
-          <opt>Animal 1D</opt>
-        </opt>
-        <opt>Animal 2
-          <opt>Animal 2A</opt>
-          <opt>Animal 2B</opt>
-          <opt>Animal 2C</opt>
-          <opt>Animal 2D</opt>
-        </opt>
-        <opt>Animal 3
-          <opt>Animal 3A</opt>
-          <opt>Animal 3B</opt>
-          <opt>Animal 3C</opt>
-          <opt>Animal 3D</opt>
-        </opt>
-        <opt>Animal 4
-          <opt>Animal 4A</opt>
-          <opt>Animal 4B</opt>
-          <opt>Animal 4C</opt>
-          <opt>Animal 4D</opt>
-        </opt>
-      </opts>
-    </Animal>
+    <Record>
+      <cols>
+        <author f="readonly">Observer's Name</author>
+        <Location_Name f="id nocertainty noannotation readonly" i="Location/Static_data/Location_Name">
+          <str>
+            <pos>1</pos>
+            <fmt>$0-</fmt>
+          </str>
+        </Location_Name>
+      </cols>
+      <Start_Observation t="button"/>
+      <Time_Observation_Started f="readonly notnull">
+        Time Observation Started
+        <str>
+          <pos>4</pos>
+          <fmt>$0</fmt>
+        </str>
+      </Time_Observation_Started>
+      <Survey_ID f="autonum notnull" b="decimal">
+        <str>
+          <pos>2</pos>
+          <fmt>$0-</fmt>
+        </str>
+        </Survey_ID>
+      <Photo t="camera" f="notnull"/>
+      <Species f="notnull">
+        <str>
+          <pos>3</pos>
+          <fmt>$0-</fmt>
+        </str>
+        <opts>
+          <opt p="roo.jpg">Animal 1
+            <opt p="roo-baby.jpg">Animal 1A</opt>
+            <opt>Animal 1B</opt>
+            <opt>Animal 1C</opt>
+            <opt>Animal 1D</opt>
+          </opt>
+          <opt>Animal 2
+            <opt>Animal 2A</opt>
+            <opt>Animal 2B</opt>
+            <opt>Animal 2C</opt>
+            <opt>Animal 2D</opt>
+          </opt>
+          <opt>Animal 3
+            <opt>Animal 3A</opt>
+            <opt>Animal 3B</opt>
+            <opt>Animal 3C</opt>
+            <opt>Animal 3D</opt>
+          </opt>
+          <opt>Animal 4
+            <opt>Animal 4A</opt>
+            <opt>Animal 4B</opt>
+            <opt>Animal 4C</opt>
+            <opt>Animal 4D</opt>
+          </opt>
+        </opts>
+      </Species>
+      <Sex t="radio" f="notnull">
+        <opts>
+          <opt>M</opt>
+          <opt>F</opt>
+          <opt>Unknown</opt>
+        </opts>
+      </Sex>
+      <Count b="decimal"/>
+      <Altitude_masl b="decimal">
+        Altitude (masl)
+      </Altitude_masl>
+      <Temperature_In_Celsius b="decimal">
+        Temperature (°C)
+      </Temperature_In_Celsius>
+      <Wind t="dropdown">
+        <opts>
+          <opt>1</opt>
+          <opt>2</opt>
+          <opt>3</opt>
+          <opt>4</opt>
+          <opt>5</opt>
+        </opts>
+      </Wind>
+      <Cloud_Cover t="dropdown">
+        <opts>
+          <opt>1</opt>
+          <opt>2</opt>
+          <opt>3</opt>
+          <opt>4</opt>
+          <opt>5</opt>
+        </opts>
+      </Cloud_Cover>
+      <Habitat t="dropdown">
+        <opts>
+          <opt>A</opt>
+          <opt>B</opt>
+          <opt>C</opt>
+          <opt>D</opt>
+          <opt>E</opt>
+        </opts>
+      </Habitat>
+      <End_Observation t="button"/>
+      <Time_Observation_Ended f="notnull"/>
+    </Record>
   </Record>
-</Record>
 
 </module>

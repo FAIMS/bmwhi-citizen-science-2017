@@ -22,31 +22,38 @@
             <Login>
               <Users/>
               <Login/>
-              <Signup_Guide_1/>
-              <Signup/>
             </Login>
           </Login>
           <Control>
             <Control>
-              <Record_Animal/>
+              <Create_New_Location/>
+              <Existing_Locations/>
               <GPS_Diagnostics/>
             </Control>
+            <Set_IDs>
+              <Next_Survey_ID/>
+            </Set_IDs>
           </Control>
-          <Record>
-            <Record>
-              <Record_author/>
-              <Record_timestamp/>
-              <Photo/>
-              <Photo_Button_1/>
+          <Location>
+            <Static_data>
               <Colgroup_1>
+                <Col_1>
+                  <Location_timestamp/>
+                </Col_1>
+                <Col_2>
+                  <Location_author/>
+                </Col_2>
+              </Colgroup_1>
+              <Location_Name/>
+              <Colgroup_2>
                 <Col_1>
                   <Latitude/>
                 </Col_1>
                 <Col_2>
                   <Longitude/>
                 </Col_2>
-              </Colgroup_1>
-              <Colgroup_2>
+              </Colgroup_2>
+              <Colgroup_3>
                 <Col_1>
                   <Northing/>
                 </Col_1>
@@ -56,13 +63,50 @@
                 <Col_3>
                   <Accuracy/>
                 </Col_3>
-              </Colgroup_2>
+              </Colgroup_3>
               <Take_From_GPS_1/>
-              <Animal/>
+              <Altitude_masl/>
+            </Static_data>
+            <Observation>
+              <Create_Observation/>
+              <Existing_Observation/>
+            </Observation>
+          </Location>
+          <Record>
+            <Record>
+              <Colgroup_1>
+                <Col_1>
+                  <Record_author/>
+                </Col_1>
+                <Col_2>
+                  <Location_Name/>
+                </Col_2>
+              </Colgroup_1>
+              <Start_Observation/>
+              <Time_Observation_Started/>
+              <Survey_ID/>
+              <Photo/>
+              <Photo_Button_1/>
+              <Species/>
+              <Sex/>
+              <Count/>
+              <Altitude_masl/>
+              <Temperature_In_Celsius/>
+              <Wind/>
+              <Cloud_Cover/>
+              <Habitat/>
+              <End_Observation/>
+              <Time_Observation_Ended/>
             </Record>
           </Record>
         </faims>
       </instance>
+      <bind nodeset="/faims/Control/Set_IDs/Next_Survey_ID" type="decimal"/>
+      <bind nodeset="/faims/Location/Static_data/Altitude_masl" type="decimal"/>
+      <bind nodeset="/faims/Record/Record/Survey_ID" type="decimal"/>
+      <bind nodeset="/faims/Record/Record/Count" type="decimal"/>
+      <bind nodeset="/faims/Record/Record/Altitude_masl" type="decimal"/>
+      <bind nodeset="/faims/Record/Record/Temperature_In_Celsius" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -103,47 +147,56 @@
         <trigger ref="Login">
           <label>{Login}</label>
         </trigger>
-        <input faims_web="true" ref="Signup_Guide_1">
-          <label/>
-        </input>
-        <trigger ref="Signup">
-          <label>{Signup}</label>
-        </trigger>
       </group>
     </group>
     <group ref="Control">
       <label>{Control}</label>
-      <group ref="Control">
+      <group ref="Control" faims_scrollable="false">
         <label>{Control}</label>
-        <trigger ref="Record_Animal">
-          <label>{Record_Animal}</label>
+        <trigger ref="Create_New_Location">
+          <label>{Create_New_Location}</label>
         </trigger>
-        <input faims_read_only="true" ref="GPS_Diagnostics">
-          <label>{GPS_Diagnostics}</label>
-        </input>
-      </group>
-    </group>
-    <group ref="Record" faims_archent_type="Record">
-      <label>{Record}</label>
-      <group ref="Record">
-        <label>{Record}</label>
-        <input faims_attribute_name="Record author" faims_attribute_type="measure" ref="Record_author" faims_read_only="true">
-          <label>{User}</label>
-        </input>
-        <input faims_attribute_name="Record timestamp" faims_attribute_type="measure" ref="Record_timestamp" faims_read_only="true">
-          <label>{Created_at}</label>
-        </input>
-        <select faims_sync="true" type="camera" faims_attribute_name="Photo" faims_attribute_type="measure" ref="Photo">
-          <label>{Photo}</label>
+        <select1 appearance="compact" ref="Existing_Locations">
+          <label>{Existing_Locations}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
           </item>
-        </select>
-        <trigger ref="Photo_Button_1">
-          <label>{Photo}</label>
-        </trigger>
+        </select1>
+        <input faims_read_only="true" ref="GPS_Diagnostics">
+          <label>{GPS_Diagnostics}</label>
+        </input>
+      </group>
+      <group ref="Set_IDs">
+        <label>{Set_IDs}</label>
+        <input ref="Next_Survey_ID" faims_style_class="required">
+          <label>{Next_Survey_ID}</label>
+        </input>
+      </group>
+    </group>
+    <group ref="Location" faims_archent_type="Location">
+      <label>{Location}</label>
+      <group ref="Static_data">
+        <label>{Static_data}</label>
         <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Location timestamp" faims_attribute_type="measure" ref="Location_timestamp" faims_read_only="true">
+              <label>{Location_Created_at}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Location author" faims_attribute_type="measure" ref="Location_author" faims_read_only="true">
+              <label>{Created_by}</label>
+            </input>
+          </group>
+        </group>
+        <input faims_attribute_name="Location Location Name" faims_attribute_type="measure" ref="Location_Name">
+          <label>{Location_Name}</label>
+        </input>
+        <group ref="Colgroup_2" faims_style="orientation">
           <label/>
           <group ref="Col_1" faims_style="even">
             <label/>
@@ -158,7 +211,7 @@
             </input>
           </group>
         </group>
-        <group ref="Colgroup_2" faims_style="orientation">
+        <group ref="Colgroup_3" faims_style="orientation">
           <label/>
           <group ref="Col_1" faims_style="even">
             <label/>
@@ -182,13 +235,112 @@
         <trigger ref="Take_From_GPS_1">
           <label>{Take_From_GPS}</label>
         </trigger>
-        <select1 type="image" faims_attribute_name="Animal" faims_attribute_type="vocab" ref="Animal">
-          <label>{Animal}</label>
+        <input faims_attribute_name="Altitude masl" faims_attribute_type="measure" ref="Altitude_masl">
+          <label>{Altitude__masl_}</label>
+        </input>
+      </group>
+      <group ref="Observation" faims_scrollable="false">
+        <label>{Observation}</label>
+        <trigger ref="Create_Observation">
+          <label>{Create_Observation}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_Observation">
+          <label>{Existing_Observation}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
           </item>
         </select1>
+      </group>
+    </group>
+    <group ref="Record" faims_archent_type="Record">
+      <label>{Record}</label>
+      <group ref="Record">
+        <label>{Record}</label>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Record author" faims_attribute_type="measure" ref="Record_author" faims_read_only="true">
+              <label>{Observer_s_Name}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Record Location Name" faims_attribute_type="measure" ref="Location_Name" faims_read_only="true">
+              <label>{Location_Name}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Start_Observation">
+          <label>{Start_Observation}</label>
+        </trigger>
+        <input faims_attribute_name="Time Observation Started" faims_attribute_type="measure" ref="Time_Observation_Started" faims_style_class="required" faims_read_only="true">
+          <label>{Time_Observation_Started}</label>
+        </input>
+        <input faims_attribute_name="Survey ID" faims_attribute_type="measure" ref="Survey_ID" faims_style_class="required">
+          <label>{Survey_ID}</label>
+        </input>
+        <select faims_sync="true" type="camera" faims_attribute_name="Photo" faims_attribute_type="measure" ref="Photo" faims_style_class="required">
+          <label>{Photo}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Photo_Button_1">
+          <label>{Photo}</label>
+        </trigger>
+        <select1 type="image" faims_attribute_name="Species" faims_attribute_type="vocab" ref="Species" faims_style_class="required">
+          <label>{Species}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_name="Sex" faims_attribute_type="vocab" ref="Sex" faims_style_class="required">
+          <label>{Sex}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <input faims_attribute_name="Count" faims_attribute_type="measure" ref="Count">
+          <label>{Count}</label>
+        </input>
+        <input faims_attribute_name="Altitude masl" faims_attribute_type="measure" ref="Altitude_masl">
+          <label>{Altitude__masl_}</label>
+        </input>
+        <input faims_attribute_name="Temperature In Celsius" faims_attribute_type="measure" ref="Temperature_In_Celsius">
+          <label>{Temperature___C_}</label>
+        </input>
+        <select1 faims_attribute_name="Wind" faims_attribute_type="vocab" ref="Wind">
+          <label>{Wind}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_name="Cloud Cover" faims_attribute_type="vocab" ref="Cloud_Cover">
+          <label>{Cloud_Cover}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_name="Habitat" faims_attribute_type="vocab" ref="Habitat">
+          <label>{Habitat}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <trigger ref="End_Observation">
+          <label>{End_Observation}</label>
+        </trigger>
+        <input faims_attribute_name="Time Observation Ended" faims_attribute_type="measure" ref="Time_Observation_Ended" faims_style_class="required">
+          <label>{Time_Observation_Ended}</label>
+        </input>
       </group>
     </group>
   </h:body>
