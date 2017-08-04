@@ -59,21 +59,21 @@
         </Location_Name>
       </cols>
       <Start_Observation t="button"/>
-      <Time_Observation_Started f="readonly notnull">
+      <Time_Observation_Started f="id readonly notnull">
         Time Observation Started
         <str>
           <pos>4</pos>
           <fmt>$0</fmt>
         </str>
       </Time_Observation_Started>
-      <Survey_ID f="autonum notnull" b="decimal">
+      <Survey_ID f="id autonum notnull" b="decimal">
         <str>
           <pos>2</pos>
           <fmt>$0-</fmt>
         </str>
         </Survey_ID>
       <Photo t="camera" f="notnull"/>
-      <Species f="notnull">
+      <Species f="id notnull">
         <str>
           <pos>3</pos>
           <fmt>$0-</fmt>

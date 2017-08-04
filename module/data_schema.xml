@@ -60,12 +60,12 @@
       <formatString>$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Survey ID" type="measure">
+    <property name="Survey ID" type="measure" isIdentifier="true">
       <description></description>
       <formatString>$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Species" type="vocab">
+    <property name="Species" type="vocab" isIdentifier="true">
       <description></description>
       <formatString>$1-</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -96,7 +96,7 @@
 <description></description></term></term>
       </lookup>
     </property>
-    <property name="Time Observation Started" type="measure">
+    <property name="Time Observation Started" type="measure" isIdentifier="true">
       <description></description>
       <formatString>$2</formatString>
       <appendCharacterString> - </appendCharacterString>
