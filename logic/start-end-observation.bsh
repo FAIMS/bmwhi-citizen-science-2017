@@ -1,0 +1,23 @@
+/*************************** START/END OBSERVATION ***************************/
+addOnEvent("Observation/Observation/Start_Observation", "click", "setToTimestampNow(\"Observation/Observation/Time_Observation_Started\")");
+addOnEvent("Observation/Observation/End_Observation", "click", "endObservation()");
+
+// End observation first validate Observation record have required field filled, if true
+// then Time_Observation_Ended field value is set to the current timestamp, else issue
+// validation message
+void endObservation() {
+  List f = new ArrayList(); // Fields to be validated
+  f.add(fieldPair("Observation/Observation/Time_Observation_Started", "{Time_Observation_Started}"));
+  f.add(fieldPair("Observation/Observation/Survey_ID", "{Survey_ID}"));
+  f.add(fieldPair("Observation/Observation/Photo", "{Photo}"));
+  f.add(fieldPair("Observation/Observation/Species", "{Species}"));
+  f.add(fieldPair("Observation/Observation/Sex", "{Sex}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+
+  if(validationMessage == "{all_fields_contain_valid_data}") {
+    setToTimestampNow("Observation/Observation/Time_Observation_Ended");
+  } else {
+    showWarning("{validation_results}", validationMessage);
+  }
+}

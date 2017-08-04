@@ -1,4 +1,4 @@
-<!--@POSTPROC: cd data; tar -cvzf ../module/data.tar.gz *-->
+<!--@POSTPROC: ./proc/post.sh-->
 <module>
 
   <Login f="nodata">
@@ -35,19 +35,20 @@
           <fmt>$0</fmt>
         </str>
       </Location_Name>
+      <Take_GPS_Coordinates t="webview"/>
       <gps/>
       <Altitude_masl b="decimal">
         Altitude (masl)
       </Altitude_masl>
     </Static_data>
-    <Observation f="noscroll">
-      <Create_Observation t="button" f="nocertainty noannotation" lc="Record"/>
-      <Existing_Observation t="list" ec="Record"/>
-    </Observation>
+    <Observation_Data f="noscroll">
+      <Create_Observation t="button" f="nocertainty noannotation" lc="Observation"/>
+      <Existing_Observation t="list" ec="Observation"/>
+    </Observation_Data>
   </Location>
 
-  <Record>
-    <Record>
+  <Observation>
+    <Observation>
       <cols>
         <author f="readonly">Observer's Name</author>
         <Location_Name f="id nocertainty noannotation readonly" i="Location/Static_data/Location_Name">
@@ -147,7 +148,10 @@
       </Habitat>
       <End_Observation t="button"/>
       <Time_Observation_Ended f="notnull"/>
-    </Record>
-  </Record>
-
+    </Observation>
+  </Observation>
+  <logic><![CDATA[
+  <!--@SOURCE: logic/start-end-observation.bsh-->
+  <!--@SOURCE: logic/custom-navigation-drawer.bsh-->
+  ]]></logic>
 </module>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <ValidationSchema>
-  <ArchaeologicalElement name="Record">
+  <ArchaeologicalElement name="Observation">
     <property name="Time Observation Started">
       <validator type="blankchecker">
         <param type="field" value="measure"/>

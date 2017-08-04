@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <dataSchema>
-  <RelationshipElement name="Location - Record" type="hierarchical">
+  <RelationshipElement name="Location - Observation" type="hierarchical">
     <description>A 1-to-n relationship between the parent and its children, respectively.</description>
     <parent>Parent Of</parent>
     <child>Child Of</child>
@@ -53,9 +53,9 @@
       <appendCharacterString> - </appendCharacterString>
     </property>
   </ArchaeologicalElement>
-  <ArchaeologicalElement name="Record">
+  <ArchaeologicalElement name="Observation">
     <description></description>
-    <property name="Record Location Name" type="measure" isIdentifier="true">
+    <property name="Observation Location Name" type="measure" isIdentifier="true">
       <description></description>
       <formatString>$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -101,7 +101,7 @@
       <formatString>$2</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Record author" type="measure">
+    <property name="Observation author" type="measure">
       <description></description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>

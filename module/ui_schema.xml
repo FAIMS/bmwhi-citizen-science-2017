@@ -45,6 +45,7 @@
                 </Col_2>
               </Colgroup_1>
               <Location_Name/>
+              <Take_GPS_Coordinates/>
               <Colgroup_2>
                 <Col_1>
                   <Latitude/>
@@ -67,16 +68,16 @@
               <Take_From_GPS_1/>
               <Altitude_masl/>
             </Static_data>
-            <Observation>
+            <Observation_Data>
               <Create_Observation/>
               <Existing_Observation/>
-            </Observation>
+            </Observation_Data>
           </Location>
-          <Record>
-            <Record>
+          <Observation>
+            <Observation>
               <Colgroup_1>
                 <Col_1>
-                  <Record_author/>
+                  <Observation_author/>
                 </Col_1>
                 <Col_2>
                   <Location_Name/>
@@ -97,16 +98,16 @@
               <Habitat/>
               <End_Observation/>
               <Time_Observation_Ended/>
-            </Record>
-          </Record>
+            </Observation>
+          </Observation>
         </faims>
       </instance>
       <bind nodeset="/faims/Control/Set_IDs/Next_Survey_ID" type="decimal"/>
       <bind nodeset="/faims/Location/Static_data/Altitude_masl" type="decimal"/>
-      <bind nodeset="/faims/Record/Record/Survey_ID" type="decimal"/>
-      <bind nodeset="/faims/Record/Record/Count" type="decimal"/>
-      <bind nodeset="/faims/Record/Record/Altitude_masl" type="decimal"/>
-      <bind nodeset="/faims/Record/Record/Temperature_In_Celsius" type="decimal"/>
+      <bind nodeset="/faims/Observation/Observation/Survey_ID" type="decimal"/>
+      <bind nodeset="/faims/Observation/Observation/Count" type="decimal"/>
+      <bind nodeset="/faims/Observation/Observation/Altitude_masl" type="decimal"/>
+      <bind nodeset="/faims/Observation/Observation/Temperature_In_Celsius" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -196,6 +197,9 @@
         <input faims_attribute_name="Location Location Name" faims_attribute_type="measure" ref="Location_Name">
           <label>{Location_Name}</label>
         </input>
+        <input faims_web="true" ref="Take_GPS_Coordinates">
+          <label>{Take_GPS_Coordinates}</label>
+        </input>
         <group ref="Colgroup_2" faims_style="orientation">
           <label/>
           <group ref="Col_1" faims_style="even">
@@ -239,8 +243,8 @@
           <label>{Altitude__masl_}</label>
         </input>
       </group>
-      <group ref="Observation" faims_scrollable="false">
-        <label>{Observation}</label>
+      <group ref="Observation_Data" faims_scrollable="false">
+        <label>{Observation_Data}</label>
         <trigger ref="Create_Observation">
           <label>{Create_Observation}</label>
         </trigger>
@@ -253,21 +257,21 @@
         </select1>
       </group>
     </group>
-    <group ref="Record" faims_archent_type="Record">
-      <label>{Record}</label>
-      <group ref="Record">
-        <label>{Record}</label>
+    <group ref="Observation" faims_archent_type="Observation">
+      <label>{Observation}</label>
+      <group ref="Observation">
+        <label>{Observation}</label>
         <group ref="Colgroup_1" faims_style="orientation">
           <label/>
           <group ref="Col_1" faims_style="even">
             <label/>
-            <input faims_attribute_name="Record author" faims_attribute_type="measure" ref="Record_author" faims_read_only="true">
+            <input faims_attribute_name="Observation author" faims_attribute_type="measure" ref="Observation_author" faims_read_only="true">
               <label>{Observer_s_Name}</label>
             </input>
           </group>
           <group ref="Col_2" faims_style="even">
             <label/>
-            <input faims_attribute_name="Record Location Name" faims_attribute_type="measure" ref="Location_Name" faims_read_only="true">
+            <input faims_attribute_name="Observation Location Name" faims_attribute_type="measure" ref="Location_Name" faims_read_only="true">
               <label>{Location_Name}</label>
             </input>
           </group>
