@@ -2,7 +2,7 @@
 This module was created for the **Blue Mountains World Heritage Institute**, based at Katoomba, NSW, Australia. The module has been designed for long term monitoring of invasive species within the Greater Blue Mountains World Heritage Area (UNESCO).
 
 ## Authorship:
-This module was co-developed by John Merson and Rosalie Chapple, BMWHI and Petra Janouchova at the FAIMS Project, Department of Ancient History, Macquarie University.
+This module was co-developed by John Merson and Rosalie Chapple at the BMWHI and Petra Janouchova at the FAIMS Project, Department of Ancient History, Macquarie University.
 
 ## Funding:
 Development of this module was funded by the **Research Attraction and Acceleration Program (RAAP)** aimed to support innovation and investment in the New South Wales in 2016 and 2017.
