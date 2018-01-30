@@ -20,7 +20,7 @@ This module is licensed under an international Creative Commons Attribution 4.0 
 This module can be downloaded from this GitHub repository. 
 
 ## This module contains the following FAIMS features: 
-* user sign-up (users can create their own accounts)
+* user login protected by password
 * picture galleries
 * coordinates from internal GPS
 * attribute-level timestamps
