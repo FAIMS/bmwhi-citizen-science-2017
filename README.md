@@ -34,14 +34,25 @@ This module can be downloaded from this GitHub repository.
 * documenting biodiversity over a long period of time
 
 ## Contact info:
-For more details about the excavation of the **Blue Mountains World Heritage Institute** please visit their webpage at http://www.bmwhi.org.au/.
+For more details about activities of the **Blue Mountains World Heritage Institute** please visit their webpage at http://www.bmwhi.org.au/.
 
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 ## Screenshots:
 
 <p align="left">
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160353.png" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160405.png" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160412.png" width="250"/>
 </p>
 
+<p align="left">
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160419.png" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160429.png" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160435.png" width="250"/>
+</p>
+
+<p align="left">
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160446.png" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160450.png" width="250"/>
+  <img src="https://github.com/FAIMS/bmwhi-citizen-science-2017/blob/master/screenshots/Screenshot_20180130-160503.png" width="250"/>
+</p>
